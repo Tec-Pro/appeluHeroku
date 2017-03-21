@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  service_id: 
+  enable: false
+  comment: MyString
+  startTime: 
+  endTime: 
+
+two:
+  user_id: 
+  service_id: 
+  enable: false
+  comment: MyString
+  startTime: 
+  endTime: 
