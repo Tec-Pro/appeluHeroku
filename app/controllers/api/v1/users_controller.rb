@@ -46,6 +46,10 @@ class Api::V1::UsersController < ApplicationController
 		end		
 	end	
 
+	 def options
+       render json: { message: "ok" 	, status: :ok }
+    end
+
 
 	#TODO - Only accessible for admin users
 	#TODO - ¿Mostrar solo los usuarios activos?
