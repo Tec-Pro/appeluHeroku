@@ -31,6 +31,7 @@ class Api::V1::UsersController < ApplicationController
 		render "api/v1/users/show"		
 	end
 
+	#GET /users/1
 	def show		
 	end
 
