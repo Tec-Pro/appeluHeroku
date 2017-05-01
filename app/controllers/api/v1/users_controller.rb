@@ -47,7 +47,7 @@ class Api::V1::UsersController < ApplicationController
 	end	
 
 	 def options
-       render json: { message: "ok" 	, status: :ok }
+       render json: {status: :ok }
     end
 
 

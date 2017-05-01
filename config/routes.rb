@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
        put "/users", to: "users#update"
        post "/login", to: "users#login"
+        match '/users' => "users#options", via: :options
        post "/users/recovery", to: "users#recovery"
 		   
  
@@ -20,10 +21,8 @@ Rails.application.routes.draw do
 		     
     end
   end
-  
+
   match "*path", :to => "application#routing_error", :via => :all
-  match '/users' => "users#options", via: :options
-
-
+ 
 end
 
