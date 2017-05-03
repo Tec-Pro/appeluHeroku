@@ -26,7 +26,7 @@ module Appelu
     config.action_dispatch.default_headers = {
         'Access-Control-Allow-Origin' => '*',
         'Access-Control-Request-Method' => '*',
-        'Access-Control-Allow-Headers' => '*'
+        'Access-Control-Allow-Headers' => 'Origin, X-Requested-With, Content-Type, Accept, Authorization, X-AUTH-TOKEN'
     }
 
   end
