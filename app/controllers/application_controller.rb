@@ -12,6 +12,10 @@ class ApplicationController < ActionController::Base
     raise ActionController::RoutingError.new(params[:path])
   end
 
+  def options
+       render json: {status: :ok }
+    end
+
   protected
 
   def error(e)

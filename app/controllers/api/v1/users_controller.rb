@@ -46,19 +46,15 @@ class Api::V1::UsersController < ApplicationController
 		end		
 	end	
 
-	 def options
-       render json: {status: :ok }
-    end
-
 
 	#TODO - Only accessible for admin users
 	#TODO - ¿Mostrar solo los usuarios activos?
 	def index
-		if @current_user.role = "ADMIN"
+		#if @current_user.role = "ADMIN"
 			@users = User.where(enable: true)
-		else
-			error!("No tiene permisos para realizar esta accion", :unauthorized)
-		end	
+		#else
+		#	error!("No tiene permisos para realizar esta accion", :unauthorized)
+		#end	
 	end
 
 
