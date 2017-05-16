@@ -1,5 +1,6 @@
 class Api::V1::BusinessesController < ApplicationController
-	
+
+	skip_before_filter :verify_authenticity_token, :only => [:create, :update]
 	before_action :authenticate, only: [:create,:update,:destroy]
 	before_action :set_business, only: [ :show,:update,:destroy ]
 	before_action(only: [:update,:destroy]) { |controlador| controlador.authenticate_owner(@business.user) }

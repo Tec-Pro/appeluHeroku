@@ -1,6 +1,7 @@
 require 'bcrypt'
 
 class Api::V1::UsersController < ApplicationController
+	skip_before_filter :verify_authenticity_token, :only => [:login, :create, :update]
 	before_action :authenticate, only: [:update, :destroy]
 	before_action :set_user, only: [:show]
 	# POST /users

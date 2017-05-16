@@ -1,4 +1,6 @@
 class Api::V1::ShiftsController < ApplicationController
+
+	skip_before_filter :verify_authenticity_token, :only => [:update]
 	before_action :authenticate, except: [:index,:show]
 	before_action :set_shift, only: [:update,:destroy]
 	before_action :set_service, only: [:create]
